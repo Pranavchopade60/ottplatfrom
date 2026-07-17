@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineVerse OTT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!--========================
+        LOADER
+=========================-->
+
+    <div id="loader">
+
+        <div class="loader-logo">
+
+            CINE<span>VERSE</span>
+
+        </div>
+
+    </div>
+
+    <!--========================
+        NAVBAR
+=========================-->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                CINE<span>VERSE</span>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="#">Movies</a></li>
+
+                <li><a href="#">TV Shows</a></li>
+
+                <li><a href="#">Trending</a></li>
+
+                <li><a href="mylist.html">My List</a></li>
+
+                <li><a href="login.html">Login</a></li>
+
+                <li><a href="signup.html">Sign Up</a></li>
+
+            </ul>
+
+            <div class="right-nav">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" id="searchInput" placeholder="Search Movies">
+
+                </div>
+
+                <button id="themeToggle">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+                <div class="profile">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span id="profileName">Profile</span>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!--========================
+      HERO SECTION
+=========================-->
+
+    <section class="hero">
+
+        <video class="hero-video" autoplay muted loop playsinline>
+
+<source
+src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/trailer/trailer1.mp4"
+type="video/mp4">
+
+</video>
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h4>NOW STREAMING</h4>
+
+            <h1>CHHAAVA</h1>
+
+            <div class="movie-info">
+
+                <span>⭐ IMDb 9.2</span>
+
+                <span>2026</span>
+
+                <span>Action</span>
+
+                <span>History</span>
+
+            </div>
+
+            <p>
+
+                Experience the legendary story of Chhatrapati Sambhaji Maharaj in an epic cinematic journey.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="play-btn" onclick="playTrailer('https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/trailer/trailer3.mp3')">
+
+<i class="fa-solid fa-play"></i>
+
+Watch Now
+
+</button>
+
+                <button class="info-btn">
+
+<i class="fa-solid fa-circle-info"></i>
+
+More Info
+
+</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <main>
+        <!-- =========================================
+        TRENDING NOW
+========================================== -->
+
+        <section class="movie-section">
+
+            <h2>🔥 Trending Now</h2>
+
+            <div class="carousel-wrapper">
+
+                <button class="arrow left">&#10094;</button>
+
+                <div class="carousel">
+
+                    <!-- Movie 1 -->
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <div class="badge">TOP</div>
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo3.png" alt="Movie">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer3.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 9.2</div>
+
+                            <h3>Chhaava</h3>
+
+                            <div class="genre">
+
+                                <span>Action</span>
+
+                                <span>History</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Movie 2 -->
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <div class="badge">NEW</div>
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo4.png" alt="Movie">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer4.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 8.8</div>
+
+                            <h3>Dhurandhar</h3>
+
+                            <div class="genre">
+
+                                <span>Action</span>
+
+                                <span>Drama</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Movie 3 -->
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo1.png">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer1.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 9.5</div>
+
+                            <h3>Avengers Endgame</h3>
+
+                            <div class="genre">
+
+                                <span>Marvel</span>
+
+                                <span>Sci-Fi</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Movie 4 -->
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo5.png" alt="Movie">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer5.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 8.9</div>
+
+                            <h3>Spider-Man</h3>
+
+                            <div class="genre">
+
+                                <span>Marvel</span>
+
+                                <span>Action</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Movie 5 -->
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo2.png">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer2.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 9.1</div>
+
+                            <h3>Infinity War</h3>
+
+                            <div class="genre">
+
+                                <span>Adventure</span>
+
+                                <span>Action</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="arrow right">&#10095;</button>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+        CONTINUE WATCHING
+========================================== -->
+
+        <section class="movie-section">
+
+            <h2>📺 Continue Watching</h2>
+
+            <div class="continue-grid">
+
+                <div class="continue-card">
+
+                    <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo1.png">
+
+                    <div class="progress">
+
+                        <div class="progress-bar" style="width:80%"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="continue-card">
+
+                    <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo2.png">
+
+                    <div class="progress">
+
+                        <div class="progress-bar" style="width:45%"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="continue-card">
+
+                    <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo3.png">
+
+                    <div class="progress">
+
+                        <div class="progress-bar" style="width:60%"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+        VIDEO POPUP
+========================================== -->
+
+        <div id="videoPopup">
+
+            <div class="popup-content">
+
+                <span class="close" onclick="closeTrailer()">
+
+<i class="fa-solid fa-xmark"></i>
+
+</span>
+
+                <video id="videoPlayer" controls autoplay>
+
+<source src="" type="video/mp4">
+
+</video>
+
+            </div>
+
+        </div>
+        <!-- =========================================
+        TOP RATED MOVIES
+========================================== -->
+
+        <section class="movie-section">
+
+            <h2>⭐ Top Rated Movies</h2>
+
+            <div class="carousel-wrapper">
+
+                <button class="arrow left">&#10094;</button>
+
+                <div class="carousel">
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo1.png">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/trailer/trailer1.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 9.8</div>
+
+                            <h3>Avengers Endgame</h3>
+
+                            <div class="genre">
+
+                                <span>Marvel</span>
+
+                                <span>Adventure</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo2.png">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer2.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 9.5</div>
+
+                            <h3>Infinity War</h3>
+
+                            <div class="genre">
+
+                                <span>Action</span>
+
+                                <span>Sci-Fi</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo3.png">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer3.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 9.2</div>
+
+                            <h3>Chhaava</h3>
+
+                            <div class="genre">
+
+                                <span>History</span>
+
+                                <span>Drama</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="arrow right">&#10095;</button>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+        RECOMMENDED
+========================================== -->
+
+        <section class="movie-section">
+
+            <h2>🎬 Recommended For You</h2>
+
+            <div class="carousel-wrapper">
+
+                <button class="arrow left">&#10094;</button>
+
+                <div class="carousel">
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo4.png">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer4.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 8.8</div>
+
+                            <h3>Dhurandhar</h3>
+
+                            <div class="genre">
+
+                                <span>Action</span>
+
+                                <span>Thriller</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="movie-card">
+
+                        <div class="poster">
+
+                            <img src="https://my-ott-website-pranav.s3.ap-south-1.amazonaws.com/images/mo5.png ">
+
+                            <div class="play-overlay">
+
+                                <button onclick="playTrailer('trailer/trailer5.mp4')">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+                            </div>
+
+                        </div>
+
+                        <div class="details">
+
+                            <div class="rating">IMDb ⭐ 8.9</div>
+
+                            <h3>Spider-Man</h3>
+
+                            <div class="genre">
+
+                                <span>Marvel</span>
+
+                                <span>Adventure</span>
+
+                            </div>
+
+                            <button class="favorite">
+
+❤ My List
+
+</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="arrow right">&#10095;</button>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+        FOOTER
+========================================== -->
+
+        <footer>
+
+            <div class="footer-content">
+
+                <h2>
+
+                    CINE<span>VERSE</span>
+
+                </h2>
+
+                <p>
+
+                    Unlimited Movies, TV Shows and Trailers. Watch Anywhere.
+
+                </p>
+
+                <div class="social">
+
+                    <i class="fab fa-facebook"></i>
+
+                    <i class="fab fa-instagram"></i>
+
+                    <i class="fab fa-twitter"></i>
+
+                    <i class="fab fa-youtube"></i>
+
+                    <i class="fab fa-linkedin"></i>
+
+                    <i class="fab fa-github"></i>
+
+                </div>
+
+                <p>
+
+                    © 2026 CineVerse OTT Platform
+
+                </p>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
