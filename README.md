@@ -22,24 +22,6 @@ http://15.207.54.226/login.html
 
 ---
 
-## Movie Library
-
-![Movies](screenshots/movies.png)
-
----
-
-## Movie Details
-
-![Details](screenshots/movie-details.png)
-
----
-
-## Watch Trailer
-
-![Trailer](screenshots/trailer.png)
-
----
-
 ## Login Page
 
 ![Login](login.png)
